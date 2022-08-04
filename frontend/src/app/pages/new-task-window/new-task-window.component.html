@@ -1,0 +1,18 @@
+<div class="centered-content">
+    <div class="modal-box">
+        <h1 class="title" style="color: yellow;">Create a New Task</h1>
+        <input #taskTitleInput class="input input is-rounded control" type="text" placeholder="Title For New Task">
+        <div class="button-group field is-grouped">
+            <p class="control">
+                <button class="button" routerLink='../'>
+                    Cancel
+                </button>
+            </p>
+            <p class="control" (click)="createTask(taskTitleInput.value);">
+                <button class="button">
+                    Add Task
+                </button>
+            </p>
+        </div>
+    </div>
+</div>

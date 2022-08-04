@@ -1,0 +1,66 @@
+//Global Styles and variables
+
+$gray : #575757;
+$pink : #d6207b;
+$black: #161616;
+$light: #808080;
+$dark: #575757;
+$yellow: #ffff00;
+$white: #ffffff;
+
+$primary: $pink;
+$link: $yellow;
+
+//Bulmas Component Variables
+$control-border-width: 2px;
+$input-border-color: transparent;
+$input-shadow:none;
+
+//Global Styles [Whole App]
+
+html {
+    background: linear-gradient(to right top, $black, $gray);
+}
+
+html, body {
+    height:100%;
+}
+
+.centered-content {
+    height: 100%;
+    width: 100%;
+
+    display:flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.modal-box {
+    display: flex;
+    flex-direction: column;
+    min-height: 240px;
+    max-width: 580px;
+    background: linear-gradient(to bottom, rgb(70, 72, 143),  rgb(9, 9, 97), black);
+    width: 100%;
+    border-radius: 5px;
+    padding: 30px;
+}
+
+.input {
+    margin-top: 15px;
+}
+
+.button-group {
+    margin-top: 15px;
+    padding: 10px;
+}
+
+.button {
+    background: lime;
+}
+
+.main-form {
+    border: 1px inset white;
+    padding: 20px;
+    // border-style: ;
+}

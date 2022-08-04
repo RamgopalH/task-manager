@@ -1,0 +1,133 @@
+@import '../../../main-styles.scss';
+
+
+
+.main-container {
+    display: flex;
+    height: 100%;
+    width: 100%;
+    max-width: 1920px;
+    max-height: 1080px;
+    flex-grow: 1;
+}
+
+.list-sidebar {
+    display: flex;
+    flex-direction: column;
+    width: 30%;
+    padding: 40px;
+    background: black;
+    // background: linear-gradient(to bottom, rgb(5, 5, 110), black);
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+    border: 5px outset whitesmoke
+}
+
+.task-view-container {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    padding: 40px;
+    background: linear-gradient(to left,  rgb(5, 5, 110), black);
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+    flex-grow: 1;
+    position: relative;
+    .top-bar {
+        display: flex;
+        .title {
+            flex-grow: 1;
+        }
+    }
+}
+
+.title {
+    color:yellow;
+    letter-spacing:  1px;
+    text-transform: uppercase;
+    margin-bottom: 0px;
+}
+
+.list-menu::-webkit-scrollbar {
+    display:none;
+}
+
+.list-menu {
+    display: flex;
+    flex-direction: column;
+    font-size: medium;
+    margin-top: 15px;
+    flex-grow: 1;
+    overflow-y: auto;
+    .list-menu-item {
+        display: flex;
+        align-items: center;
+        padding: 10px 15px;
+        border-radius: 15px;
+        margin-bottom: 5px;
+        color: aqua;
+
+        &:hover {
+            background-color: rgb(90, 88, 88);
+        }
+
+        &.is-active {
+            background-color: black;
+            border: 4px outset yellow;
+            text-emphasis: 2;
+        }
+    }
+}
+
+.button {
+    background-color: lime;
+    color: black;
+}
+
+
+.task-menu {
+    display: flex;
+    flex-direction: column;
+    margin-top: 34px;
+    flex-grow: 1;
+    .task-menu-item {
+        margin-bottom: 10px;
+        padding: 10px 15px;
+        background-color: white;
+        border-radius: 10px;
+        cursor: pointer;
+
+        transition: box-shadow 0.2s ease , transform 0.2s ease;
+
+        &:not(.complete){
+            &:hover {
+                box-shadow: 0 0 0 2px yellow;
+            }
+        }
+        
+        &:active {
+            transform: scale(0.95);
+        }
+
+        &.complete {
+            text-decoration: line-through;
+            opacity: 0.7;
+        }
+    }
+}
+
+.button-flex {
+    display: flex;
+    justify-content: flex-end;
+    height: fit-content;
+}
+
+.circle-add-task-button {
+    height: 50px;
+    width: 50px;
+    background-color: lime;
+    font-size: larger;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
